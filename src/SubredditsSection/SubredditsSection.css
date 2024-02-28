@@ -1,0 +1,8 @@
+.SubredditsSection {
+    border: 1px solid #343536;
+    border-radius: 4px;
+    max-width: 100%;
+    padding: 0 2rem;
+    margin-left: -17rem;
+    margin-right: 1rem; 
+}

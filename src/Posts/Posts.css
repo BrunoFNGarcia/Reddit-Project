@@ -1,0 +1,44 @@
+.Posts {
+    display: block;
+    flex-direction: column;
+    border: 1px solid #343536;
+    margin-bottom: 0.625rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    padding-left: 2.5rem;
+    font-size: 1rem;
+    width: 80%;
+}
+
+.PostsSubredditPrefix {
+    text-align: left;
+    margin-bottom: -0.5rem;
+}
+
+.PostsTitle {
+    text-align: left;
+}
+
+.PostsImg {
+    max-width: 50%;
+}
+
+.PostsVideo {
+    max-width: 50%;
+}
+
+.PostsSubsection {
+    display: flex;
+    gap: 3rem;
+    color: #949798;
+    font-size: 0.85rem;
+    font-family: RedditSansBold;
+}
+
+.PostsSlider {
+    display: flex;
+}
+
+.PostsSliderGalleryImages {
+    max-width: 50%;
+}
