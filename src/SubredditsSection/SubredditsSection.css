@@ -4,5 +4,7 @@
     max-width: 100%;
     padding: 0 2rem;
     margin-left: -17rem;
-    margin-right: 1rem; 
+    margin-right: 1rem;
+    max-height: 115vh;
+    color: #333637;
 }

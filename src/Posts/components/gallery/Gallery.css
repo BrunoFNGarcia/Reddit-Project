@@ -1,0 +1,12 @@
+.GalleryImage {
+    max-width: 50%;
+}
+
+#RightArrow {
+    max-width: 5%;
+}
+
+#LeftArrow {
+    max-width: 5%;
+    transform: rotate(180deg);
+}
