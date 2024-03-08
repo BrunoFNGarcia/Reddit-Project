@@ -4,6 +4,7 @@ import { ReactComponent as RedditLogo } from './Assets/RedditLogo.svg';
 import SearchBar from './SearchBar/SearchBar';
 import Feed from './Feed/Feed';
 import SubredditsSection from './SubredditsSection/SubredditsSection';
+import SearchResults from './SearchResults/SearchResults';
 
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
   const [feed, setFeed] = useState([]);
   const [subreddits, setSubreddits] = useState([]);
   const [selectedSubreddit, setSelectedSubreddit] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [text, setText] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,15 +47,33 @@ function App() {
     fetchData();
   }, [])
 
-  // useEffect(() => {
-  //   fetch('https://www.reddit.com/hot.json')
-  //     .then(response => response.json())
-  //     .then(json => setSubreddits(json.data.children))
-  // }, []);
-
   const handleClick = (value) => {
     setSelectedSubreddit(value);
+    setText('');
+    setSearchResults([]);
   };
+
+  const handleTextChange = e => {
+    setText(e.target.value);
+    e.target.value !== '' ? search(e.target.value) : search([]);
+  };
+
+  const search = async (value) => {
+    try {
+      const fetchData = await fetch(`https://api.reddit.com/search.json?q=${value}`)
+      const response = await fetchData.json();
+      const json = await response.data.children;
+      setSearchResults(json);
+    } catch(error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  // const search = value => {
+  //   fetch(`https://api.reddit.com/search.json?q=${value}`)
+  //   .then(response => response.json())
+  //   .then(json => setSearchResults(json.data.children))
+  // }
 
   return (
     <div className="App">
@@ -62,7 +83,16 @@ function App() {
           <h1 className='HeaderMainTitle'><span className='redditTitle'>reddit</span>project</h1>
         </div>
         <div className='HeaderSearchBar'>
-          <SearchBar/>
+          <SearchBar
+            onChange={handleTextChange}
+            searchResults={searchResults}
+            value={text}
+          />
+          <SearchResults
+            setSearchResults={setSearchResults}
+            searchResults={searchResults}
+            onClick={handleClick}
+          />
         </div>
       </div>
       <div className='Main'>

@@ -1,0 +1,27 @@
+.SearchResultsContainer {
+    height: 20rem;
+    width: inherit;
+    text-align: left;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 0px 0px 8px #ddd; */
+    border-radius: 20px;
+    position: absolute;
+    background-color: #1A282D;
+    color: #b8c5c9;
+    overscroll-behavior: contain;
+}
+
+.SearchResultsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.SearchResultsItem {
+    padding-left: 3rem;
+}
+
+.SearchResultsItem:hover {
+    background-color: #DEE1E3;
+    cursor: pointer;
+}

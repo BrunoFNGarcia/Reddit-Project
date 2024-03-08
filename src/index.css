@@ -33,6 +33,8 @@ body {
   width: 100%;
   min-height: 100vh;
   max-width: 99%;
+  background-color: #0B1416;
+  color: white;
 }
 
 code {

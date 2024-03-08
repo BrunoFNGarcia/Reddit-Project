@@ -1,4 +1,23 @@
 .Subreddit {
     text-align: left;
-    width: 20rem;
+    max-width: 100%;
+    /* background-color: red; */
+    padding: 0.25rem 2rem;
+}
+
+.Subreddit:hover {
+    background-color: #FF8864;
+    cursor: pointer;
+}
+
+/* .Subreddit:focus {
+    background-color: #FF4500;
+} */
+
+.Subreddit {
+    /* overflow-y: auto; */
+}
+
+.SelectedSubreddit {
+    /* background-color: red; */
 }

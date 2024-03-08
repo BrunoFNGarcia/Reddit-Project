@@ -8,11 +8,13 @@
     padding-left: 2.5rem;
     font-size: 1rem;
     width: 80%;
+    /* min-width: 80%; */
 }
 
 .PostsSubredditPrefix {
     text-align: left;
     margin-bottom: -0.5rem;
+    color: #B8C5C9;
 }
 
 .PostsTitle {

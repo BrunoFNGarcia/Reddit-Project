@@ -1,10 +1,23 @@
 .SubredditsSection {
     border: 1px solid #343536;
+    border-right: none;
     border-radius: 4px;
     max-width: 100%;
-    padding: 0 2rem;
-    margin-left: -17rem;
-    margin-right: 1rem;
-    max-height: 115vh;
-    color: #333637;
+    margin-left: -16rem;
+    max-height: 70vh;
+    position: sticky;
+    top: 155px;
+    background-color: #0B1416;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
+
+.SubredditsSection::-webkit-scrollbar {
+    background: #0B1416;
+    width: 0.5rem;
+}
+
+.SubredditsSection::-webkit-scrollbar-thumb {
+    background: #1A282D;
+}
+

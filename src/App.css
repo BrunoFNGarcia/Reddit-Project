@@ -4,11 +4,15 @@
 
 .Header {
   display: flex;
+  position: sticky;
+  z-index: 1;
+  top: 0;
   gap: 10rem;
   align-items: center;
   margin-top: -1rem;
   margin-left: -1rem;
   margin-bottom: 5rem;
+  background-color: #0B1416;
 }
 
 .HeaderMain {
