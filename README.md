@@ -15,7 +15,7 @@ The first page is Reddit Home. It shows the newest and trending posts from all k
   
 
 # Technologies
-HTML/CSS/JavaScript - Main stack
-React - Component Management and Reusability
-Redux (WIP) - State Management
-Jest (WIP) - Unit Tests
+* HTML/CSS/JavaScript - Main stack
+* React - Component Management and Reusability
+* Redux (WIP) - State Management
+* Jest (WIP) - Unit Tests
