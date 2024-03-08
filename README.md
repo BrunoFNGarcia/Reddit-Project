@@ -4,7 +4,7 @@ This project was bootstrapped with Create React App and completed as part of the
 
 ## How to Use
 
-Open <>. It's a web view from reddit. It uses the JSON API from reddit <https://github.com/reddit-archive/reddit/wiki/JSON> to get all data. It's not authenticated, so you cannot login and comment/share, but you can see any kind of content.
+Open <>. It's a web view from reddit. It uses the [JSON API](https://github.com/reddit-archive/reddit/wiki/JSON) from reddit to get all data. It's not authenticated, so you cannot login and comment/share, but you can see any kind of content.
 Work In Progress:
   *Comments
   *Redux implementation
