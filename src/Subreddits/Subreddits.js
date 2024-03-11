@@ -12,7 +12,7 @@ function Subreddits(props) {
     }
 
     return (
-        <div className={classname === props.subreddit ? 'SelectedSubreddit' : 'Subreddit'} onClick={handleClick}>
+        <div className={props.selectedSubreddit === props.subreddit ? 'SelectedSubreddit' : 'Subreddit'} onClick={handleClick}>
             <h3>{props.subredditPrefix}</h3>
         </div>
     )

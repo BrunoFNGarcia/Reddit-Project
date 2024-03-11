@@ -11,6 +11,7 @@ function SubredditsSection(props) {
                         key={sr.data.id}
                         subredditPrefix={sr.data.subreddit_name_prefixed}
                         subreddit={sr.data.subreddit}
+                        selectedSubreddit={props.selectedSubreddit}
                         onClick={props.onClick}
                     />
                 )

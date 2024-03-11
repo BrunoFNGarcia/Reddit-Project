@@ -5,6 +5,7 @@ import SearchBar from './SearchBar/SearchBar';
 import Feed from './Feed/Feed';
 import SubredditsSection from './SubredditsSection/SubredditsSection';
 import SearchResults from './SearchResults/SearchResults';
+// import InfiniteScroll from './InfiniteScroll';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const [selectedSubreddit, setSelectedSubreddit] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [text, setText] = useState('');
+  // const [isFetching, setIsFetching] = InfiniteScroll(fetchMoreItems);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +47,17 @@ function App() {
       }
     };
     fetchData();
-  }, [])
+  }, []);
+
+  // function fetchMoreItems() {
+  //   const fetchData = fetch(`'https://api.reddit.com/.json?feed=home&after=${feed.data.after}'`)
+
+  //   }
+  //   setTimeout(() => {
+  //     setFeed(prevState => ([...prevState, ]));
+  //     setIsFetching(false);
+  //   }, 2000);
+  // }
 
   const handleClick = (value) => {
     setSelectedSubreddit(value);
@@ -96,14 +108,16 @@ function App() {
         </div>
       </div>
       <div className='Main'>
+        <SubredditsSection
+          subreddits={subreddits}
+          selectedSubreddit={selectedSubreddit}
+          onClick={handleClick}
+        />
         <Feed
           feed={feed}
         />
-        <SubredditsSection
-          subreddits={subreddits}
-          onClick={handleClick}
-        />
       </div>
+      {/* {isFetching && 'Fetching more items...'} */}
     </div>
   );
 }
