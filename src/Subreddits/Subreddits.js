@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import './Subreddits.css';
 
 function Subreddits(props) {
-    const[classname, setClassname] = useState('');
+    // const[classname, setClassname] = useState('');
 
     const handleClick = (e) => {
         props.onClick(props.subreddit);
-        setClassname(e.target);
+        // setClassname(e.target);
         // setColor('#ff4500');
         // e.currentTarget.style.backgroundColor = '#ff4500';
     }
