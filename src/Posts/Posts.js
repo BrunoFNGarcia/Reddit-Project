@@ -16,7 +16,7 @@ function Posts(props) {
                     />}
                 </div>
                 {props.isVideo && <video className="PostsVideo" src={props.video.reddit_video.fallback_url} controls></video>}
-                {props.isImage === 'image' && <img className="PostsImg" src={props.url}/>}
+                {props.isImage === 'image' && <img className="PostsImg" src={props.url} alt="" />}
                 {props.text !== '' && <p className="PostsText">{props.text}</p>}
             </div>
             <div className="PostsSubsection">
