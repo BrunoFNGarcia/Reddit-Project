@@ -11,7 +11,7 @@
 // })}
 
 import './Gallery.css';
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Gallery(props) {
     const imagesUrls = props.keys.map(key => props.gallery[key].s.u.split('?')[0].replace('preview', 'i'));
