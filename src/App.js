@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { ReactComponent as RedditLogo } from './Assets/RedditLogo.svg';
 import SearchBar from './SearchBar/SearchBar';
